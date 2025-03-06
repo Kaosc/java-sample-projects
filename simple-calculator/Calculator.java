@@ -24,7 +24,6 @@ public class Calculator {
 
     void execute() {
         Scanner scanner = new Scanner(System.in);
-        Operations operations = new Operations();
 
         while (true) {
             printOptions();
@@ -75,7 +74,7 @@ public class Calculator {
                             numbers[i] = Integer.parseInt(strNumberList[i]);
                         }
 
-                        System.out.println("\n>> Avarage result: " + operations.average(numbers));
+                        System.out.println("\n>> Avarage result: " + Operations.average(numbers));
                     } catch (Exception e) {
                         System.out.println("\nInvalid input! Please enter valid integers separated by space.");
                         continue;
@@ -107,13 +106,13 @@ public class Calculator {
 
                     switch (choice) {
                         case 1:
-                            operationResult = "Addition result: " + operations.add(a, b);
+                            operationResult = "Addition result: " + Operations.add(a, b);
                             break;
                         case 2:
-                            operationResult = "Subtraction result: " + operations.subtract(a, b);
+                            operationResult = "Subtraction result: " + Operations.subtract(a, b);
                             break;
                         case 3:
-                            operationResult = "Multiplication result: " + operations.multiply(a, b);
+                            operationResult = "Multiplication result: " + Operations.multiply(a, b);
                             break;
                         case 4:
                             if (b == 0) {
@@ -121,10 +120,10 @@ public class Calculator {
                                 break;
                             }
 
-                            operationResult = "Division result: " + operations.divide(a, b);
+                            operationResult = "Division result: " + Operations.divide(a, b);
                             break;
                         case 5:
-                            operationResult = "Modulus result: " + operations.modulus(a, b);
+                            operationResult = "Modulus result: " + Operations.modulus(a, b);
                             break;
                     }
 
